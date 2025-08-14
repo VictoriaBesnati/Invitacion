@@ -30,13 +30,23 @@ const botonMusica = document.getElementById("boton-musica");
 const audio = document.getElementById("musica");
 let reproduciendo = true;
 
-botonMusica.addEventListener("click", () => {
-  if (reproduciendo) {
-    audio.pause();
-    botonMusica.textContent = "▶";
-  } else {
-    audio.play();
-    botonMusica.textContent = "⏸";
-  }
-  reproduciendo = !reproduciendo;
+// ---------- CONTROL DE MÚSICA ----------
+const audio = document.getElementById('musica');
+const playPauseBtn = document.getElementById('playPauseBtn');
+
+// Para cumplir con la política de los navegadores
+document.body.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play().catch(err => console.log('No se pudo reproducir automáticamente:', err));
+    }
+}, { once: true });
+
+playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = '⏸'; // Cambia a ícono pausa
+    } else {
+        audio.pause();
+        playPauseBtn.textContent = '▶'; // Cambia a ícono play
+    }
 });
