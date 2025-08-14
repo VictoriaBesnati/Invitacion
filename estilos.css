@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --------------------------------------------- RESET ---------------------------------------------*/
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.content-input input,
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* --------------------------------------------- Config ---------------------------------------------*/
+
+:root {
+  /*--- Paleta ---*/
+  --blanco: #F6E8FF;
+  --gris: #4B464E;
+  --grisoscuro: #363535;
+  --negro: #291735;
+  --lila: #DEC0F1;
+  --violeta: #5849D0;
+  --violeta2: #CB99EA;
+  /*--- Tipografia ---*/
+  --small: 2rem;
+  --medium: 2.4rem;
+  --large: 3.2rem;
+  --xlarge: 4rem;
+  --jumbo: 4.8rem;
+  --display: 10rem;
+  /*--- Espacios ---*/
+  --space-margen: 6rem;
+  --space-enorme: 10.4rem;
+  --space-grande: 9.6rem;
+  --space-mediano: 6.2rem;
+  --space-intermedio: 3.2rem;
+  --space-chico: 2.4rem;
+
+}
+
+.carattere-regular {
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-regular {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-bold {
+  font-family: "Cardo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardo-regular-italic {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+body {
+  background-image: url("Img/Fondos/fondo_brillos.png");
+  font-family: "Cardo", serif;
+  color: var(--negro);
+  font-weight: 400;
+}
+
+header {
+  justify-content: center;
+  background-image: url("Img/Fondos/fondo_brillos_degrade.png");
+  background-repeat: no-repeat;
+  background-position: center  center;
+  padding: 26rem var(--space-margen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+h1,
+h2 {
+  font-family: "Carattere", cursive;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: var(--display);
+}
+
+h2 {
+  color: var(--gris);
+  font-size: 7rem;
+  justify-self: center;
+}
+
+h3 {
+  font-family: "Cardo", serif;
+  font-size: var(--xlarge);
+  font-weight: 700;
+}
+
+h4 {
+  font-size: var(--large);
+  font-weight: 200;
+}
+
+p a {
+  font-family: "Cardo", serif;
+  font-size: var(--medium);
+}
+
+button {
+  font-family: "Cardo", serif;
+  padding: var(--small) var(--xlarge);
+  font-size: var(--small);
+  font-weight: 600;
+  color: var(--grisoscuro);
+  background-color: var(--lila);
+  border-radius: 2rem;
+  justify-self: center;
+}
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separador {
+  justify-content: center;
+  background-color: var(--lila);
+  margin: 0;
+  padding: var(--small) 0;
+}
+
+.separador2 {
+  justify-content: center;
+  margin: 0;
+  padding: var(--small) 0;
+}
+
+.fondolila {
+  background-color: var(--lila);
+}
+
+.fondodegrade {
+  background-image: url(Img/Fondos/fondodegrade2.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: var(--small) var(--space-intermedio);
+}
+
+.countdown {
+  background-color: var(--lila);
+  padding: var(--space-margen) var(--space-chico);
+  align-items: center;
+}
+
+.countdown-container {
+  justify-content: center;
+  padding: var(--small) 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--lila);
+}
+
+.countdown-box {
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  font-family: "Cardo", serif;
+  font-size: var(--large);
+  font-style: italic;
+  color: #3d003d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: var(--small);
+  margin-top: 5px;
+  color: #3d003d;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-grande) 0;
+}
+
+.fecha-container {
+  padding: var(--space-mediano) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Cardo", serif;
+}
+
+.fecha-texto {
+  font-size: var(--medium);
+  color: var(--negro);
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--negro);
+  border-bottom: 1px solid var(--negro);
+}
+
+.fecha-texto2 {
+  font-size: var(--medium);
+  color: var(--negro);
+  font-weight: 700;
+  padding: 0.8rem 0.4rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--negro);
+  border-bottom: 1px solid var(--negro);
+}
+
+.fecha-dia {
+  font-family: "Carattere", cursive;
+  font-size: 8rem;
+  color: var(--negro);
+  font-weight: 400;
+}
+
+.donde {
+  padding: 0 var(--space-mediano);
+
+}
+
+.donde>p {
+  padding: var(--space-chico) 0;
+  font-size: var(--medium);
+}
+
+.mapa {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  /* Ocupa el 80% de la altura de la pantalla */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mapa iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dresscode {
+  padding: var(--space-grande) var(--space-chico);
+  background-image: url(Img/Fondos/degradesolo.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.dresscode>p {
+  font-size: var(--medium);
+  padding: var(--space-chico) 0;
+}
+
+.dresscode>img {
+  width: 80%;
+  align-self: center;
+  padding: var(--space-chico) 0;
+}
+
+.asistencia {
+  padding: var(--space-grande) var(--space-chico);
+  background-image: url(Img/Fondos/confirmar.png);
+  background-repeat: no-repeat;
+}
+
+.asistencia>p {
+  font-size: var(--medium);
+  padding: var(--space-mediano) 0;
+}
+
+.asistencia>.centro>a>button {
+  background-color: var(--violeta);
+  font-family: "Cardo", serif;
+  color: var(--blanco);
+  font-size: var(--medium);
+  font-weight: 400;
+}
+
+.regalo {
+  padding: var(--space-grande) var(--space-chico);
+  background-image: url(Img/Fondos/degradesolo\ -\ copia.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.regalo>p {
+  font-size: var(--medium);
+}
+
+.regalo>h3 {
+  padding-bottom: var(--space-chico);
+}
+
+.regalo>img {
+  padding: var(--space-mediano) 0;
+  width: 60%;
+  align-self: center;
+}
+
+.despedida {
+  padding: 17rem var(--space-chico);
+  background-image: url(Img/Fondos/Teespero.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+footer {
+  padding: var(--space-grande) var(--space-chico);
+  background-color: var(--negro);
+  color: var(--blanco);
+  font-size: medium;
+  text-align: center;
+}
+
+footer>a>img {
+  width: 10%;
+  align-self: center;
+  padding: var(--space-chico);
+}
+/*
+@media screen and (min-width: 750px) {
+
+  body {
+    margin: 0 20%;
+  }
+}
+  */

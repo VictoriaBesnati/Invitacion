@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --------------------------------------------- RESET ---------------------------------------------*/
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.content-input input,
+.content-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* --------------------------------------------- Config ---------------------------------------------*/
+
+:root {
+  /*--- Paleta ---*/
+  --blanco: #F6E8FF;
+  --gris: #4B464E;
+  --grisoscuro: #363535;
+  --negro: #291735;
+  --lila: #DEC0F1;
+  --violeta: #5849D0;
+  --violetaoscuro: #572279;
+  --violeta2: #CB99EA;
+  /*--- Tipografia ---*/
+  --xsmall: 1.8rem;
+  --small: 2.4rem;
+  --medium: 3.2rem;
+  --large: 4rem;
+  --xlarge: 6rem;
+  --jumbo: 6.8rem;
+  --display: 10rem;
+  /*--- Espacios ---*/
+  --space-margen: 3rem;
+  --space-portada: 32rem;
+  --space-enorme: 18rem;
+  --space-grande: 10rem;
+  --space-mediano: 6.2rem;
+  --space-intermedio: 3.2rem;
+  --space-chico: 2.4rem;
+
+}
+
+.carattere-regular {
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-regular {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardo-bold {
+  font-family: "Cardo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardo-regular-italic {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  background-image: url(Img/Fondos/fondo_brillos.png);
+  width: 100%;
+}
+
+h1 {
+  font-family: "Carattere", cursive;
+  font-size: var(--display);
+  color: var(--negro);
+  font-weight: 400;
+  justify-self: center;
+}
+
+h2 {
+  font-family: "Carattere", cursive;
+  font-size: var(--jumbo);
+  color: var(--gris);
+  font-weight: 400;
+  justify-self: center;
+}
+
+h3 {
+  font-family: "Cardo", serif;
+  font-size: var(--medium);
+  font-weight: 700;
+  color: var(--negro);
+}
+
+h4 {
+  font-size: var(--large);
+  font-weight: 200;
+  color: var(--negro);
+}
+
+p,
+a,
+span {
+  font-family: "Cardo", serif;
+  font-size: var(--small);
+  color: var(--negro);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-portada) 0;
+  position: relative;
+  text-align: center;
+}
+
+section {
+  padding: var(--space-margen);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-chico);
+}
+
+button {
+  font-family: "Cardo", serif;
+  padding: var(--small) var(--xlarge);
+  font-size: var(--small);
+  font-weight: 600;
+  color: var(--grisoscuro);
+  background-color: var(--violeta2);
+  border-radius: 2rem;
+  justify-self: center;
+  cursor: pointer;
+}
+
+
+/* --------------------------------------------- Separador ---------------------------------------------*/
+.separador {
+  justify-content: center;
+  margin: 0;
+  padding: var(--space-chico) 0;
+}
+
+/* --------------------------------------------- Cuenta regresiva ---------------------------------------------*/
+.countdown {
+  background-color: var(--lila);
+  padding: var(--space-margen) var(--space-chico);
+  align-items: center;
+}
+
+.countdown-container {
+  justify-content: center;
+  padding: var(--small) 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--lila);
+}
+
+.countdown-box {
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  font-family: "Cardo", serif;
+  font-size: var(--large);
+  font-style: italic;
+  color: #3d003d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  text-align: center;
+  font-size: var(--xsmall);
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #3d003d;
+}
+
+/* --------------------------------------------- CUANDO ---------------------------------------------*/
+.fecha-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Cardo", serif;
+}
+
+.fecha-texto {
+  font-size: var(--small);
+  color: var(--negro);
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--negro);
+  border-bottom: 1px solid var(--negro);
+}
+
+.fecha-texto2 {
+  font-size: var(--small);
+  color: var(--negro);
+  font-weight: 700;
+  padding: 0.8rem 0.4rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--negro);
+  border-bottom: 1px solid var(--negro);
+}
+
+.fecha-dia {
+  font-family: "Carattere", cursive;
+  font-size: 8rem;
+  color: var(--negro);
+  font-weight: 400;
+}
+
+.cuando>a {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+/* --------------------------------------------- DONDE ---------------------------------------------*/
+
+.mapa {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  /* Ocupa el 80% de la altura de la pantalla */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mapa iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------------------------------- Dresscode ---------------------------------------------*/
+.dresscode>img {
+  width: 60%;
+  align-self: center;
+}
+
+/* --------------------------------------------- Asistencia ---------------------------------------------*/
+.asistencia {
+
+  padding: var(--space-enorme) var(--space-margen);
+  background-image:
+    linear-gradient(to top, var(--lila), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), var(--lila)),
+    url(Img/Fondos/confirmar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.asistencia>a>button {
+  background-color: var(--violeta);
+  color: var(--blanco);
+  font-weight: 400;
+}
+
+/* --------------------------------------------- Regalo ---------------------------------------------*/
+.regalo>p>b {
+  color: var(--violetaoscuro);
+}
+
+.regalo>img {
+  width: 60%;
+  align-self: center;
+}
+
+/* --------------------------------------------- Te espero ---------------------------------------------*/
+.despedida {
+  align-items: center;
+  padding: var(--space-enorme) 0;
+  background: radial-gradient(var(--lila), rgba(255, 255, 255, 0));
+  ;
+}
+
+/* --------------------------------------------- Footer ---------------------------------------------*/
+footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: var(--space-margen);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-chico);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+footer>a>img {
+  width: 10%;
+  align-self: center;
+  justify-content: center;
+}
+
+footer a {
+  color: var(--blanco);
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: var(--blanco);
+  font-size: var(--xsmall);
+}
+
+/* ----------------------- FONDOS -------------------------*/
+header {
+  background: linear-gradient(to top, var(--lila), rgba(255, 255, 255, 0));
+}
+
+.fondolila {
+  background-color: var(--lila);
+}
+
+.degrade-abajo {
+  background: linear-gradient(to bottom, var(--lila), rgba(255, 255, 255, 0));
+}
+
+.degrade-arriba {
+  background: linear-gradient(to top, var(--lila), rgba(255, 255, 255, 0));
+}
+
+#boton-musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;       /* ancho fijo */
+  height: 60px;      /* alto fijo */
+  background-color: var(--violeta);
+  color: white;
+  border: none;
+  border-radius: 50%; /* círculo perfecto */
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 0; 
+  justify-content: center;
+  text-align: center;
+}
+
+#boton-musica:hover {
+  background-color: var(--negro);
+}
+.numero-fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30rem; 
+  font-family: "Cardo", serif;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.1); /* color y transparencia */
+  z-index: 0;
+}
+
+
+@media screen and (min-width: 750px) {
+
+  body {
+    justify-content: center;
+  }
+
+  section {
+    padding: var(--space-mediano) 30%;
+  }
+
+  .asistencia {
+    padding: var(--space-enorme) 30%;
+  }
+
+  .separador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .separador>img {
+    width: 20%;
+  }
+  .regalo>img {
+    width: 40%;
+    align-self: center;
+    padding: var(--space-mediano) 0;
+}
+.dresscode>img {
+    width: 40%;
+    align-self: center;
+}
+}
