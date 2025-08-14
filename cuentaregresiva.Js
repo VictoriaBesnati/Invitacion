@@ -1,4 +1,4 @@
-const targetDate = new Date("2025-10-18T21:00:00");
+const fechaObjetivo = new Date(2025, 9, 18, 21, 0, 0);
 
 function updateCountdown() {
   const now = new Date();
@@ -50,3 +50,4 @@ playPauseBtn.addEventListener('click', () => {
         playPauseBtn.textContent = '▶'; // Cambia a ícono play
     }
 });
+
